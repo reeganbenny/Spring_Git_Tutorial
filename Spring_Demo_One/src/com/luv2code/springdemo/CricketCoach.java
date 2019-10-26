@@ -4,6 +4,9 @@ public class CricketCoach implements Coach {
 
 	//Define the field for constructor Injection
 	private FortuneService fortuneService;
+	private String emailAddress;
+	private String team;
+	
 		
 	//Define a no-arg constructor for MyApp
 	public CricketCoach() {
@@ -15,6 +18,15 @@ public class CricketCoach implements Coach {
 		fortuneService = theFortuneService;
 	}
 	
+	
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
+	public void setTeam(String team) {
+		this.team = team;
+	}
+
 	@Override
 	public String getDailyWorkout() {
 		
@@ -25,6 +37,14 @@ public class CricketCoach implements Coach {
 	public String getDailyFortune() {
 		
 		return fortuneService.getFortune();
+	}
+
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	public String getTeam() {
+		return team;
 	}
 
 }

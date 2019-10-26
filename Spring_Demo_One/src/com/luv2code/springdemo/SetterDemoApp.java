@@ -2,7 +2,7 @@ package com.luv2code.springdemo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class SpringDemoApp {
+public class SetterDemoApp {
 
 	public static void main(String[] args) {
 		
@@ -11,12 +11,16 @@ public class SpringDemoApp {
 				new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		//Retrieve the bean from spring file
-		Coach theCoach = context.getBean("myCricketCoach",Coach.class);
+		CricketCoach theCoach = context.getBean("myCricketCoach",CricketCoach.class);
 		
 		//Call the bean
 		System.out.println(theCoach.getDailyWorkout());
 		
 		System.out.println(theCoach.getDailyFortune());
+		
+		System.out.println(theCoach.getTeam());
+		
+		System.out.println(theCoach.getEmailAddress());
 		
 		//Close the context
 		context.close();
