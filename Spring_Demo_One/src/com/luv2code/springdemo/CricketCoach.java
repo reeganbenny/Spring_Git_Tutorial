@@ -10,8 +10,8 @@ public class CricketCoach implements Coach {
 		
 	}
 	
-	//Define the constructor for the constructor Injection
-	public CricketCoach(FortuneService theFortuneService) {
+	//Define the setter function for the constructor Injection
+	public void setFortuneService(FortuneService theFortuneService) {
 		fortuneService = theFortuneService;
 	}
 	
